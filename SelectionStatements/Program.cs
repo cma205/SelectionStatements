@@ -6,32 +6,40 @@ namespace SelectionStatements
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to my number game!");
-            Console.WriteLine("Try to guess my favorite number!");
-            int favNumber = 7;
-            var userInput = int.Parse(Console.ReadLine());
-            if (favNumber < userInput)
+            Console.WriteLine("What is your favorite genre of music?");
+            var subject = Console.ReadLine();
+
+            switch (subject)
             {
-                Console.WriteLine("Sorry, that's too high.");
+                case "Classic Rock":
+                    Console.WriteLine("The term 'boomer' is a compliment.");
+                    break;
+                case "Metal":
+                    Console.WriteLine("Long hair don't care.");
+                    break;
+                case "Country":
+                    Console.WriteLine("Willie, Waylon, and Lil Nas X?");
+                    break;
+                case "Electronic":
+                    Console.WriteLine("I cAn HeAr ALL tHe CoLoRs");
+                    break;
+                case "Hip Hop":
+                    Console.WriteLine("So, Tupac's in Cuba?");
+                    break;
+                default:
+                    Console.WriteLine("Crabcore? Never heard of it. Try something more conventional.");
+                    break;
+
             }
-            else if (favNumber > userInput)
-            {
-                Console.WriteLine("Sorry, that's too low.");
-            }
-            else
-            {
-                Console.WriteLine("That's it! Congratulations!");
-            }
-
-
-
-
-
-
-
-
-
-            
         }
+
+
+
+
+
+
+
+
+           
     }
 }
