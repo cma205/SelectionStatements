@@ -9,25 +9,28 @@ namespace SelectionStatements
             Console.WriteLine("What is your favorite genre of music?");
             var subject = Console.ReadLine();
 
-            switch (subject)
+            switch (subject.ToLower())
             {
-                case "Classic Rock":
-                    Console.WriteLine("The term 'boomer' is a compliment.");
+                case "classic rock":
+                    Console.WriteLine("You may think the term 'boomer' is a compliment.");
                     break;
-                case "Metal":
+                case "metal":
                     Console.WriteLine("Long hair don't care.");
                     break;
-                case "Country":
+                case "country":
                     Console.WriteLine("Willie, Waylon, and Lil Nas X?");
                     break;
-                case "Electronic":
+                case "electronic":
                     Console.WriteLine("I cAn HeAr ALL tHe CoLoRs");
                     break;
-                case "Hip Hop":
+                case "hip hop":
                     Console.WriteLine("So, Tupac's in Cuba?");
                     break;
+                case "pop":
+                    Console.WriteLine("We all listen to Backstreet Boys sometimes.");
+                    break;
                 default:
-                    Console.WriteLine("Crabcore? Never heard of it. Try something more conventional.");
+                    Console.WriteLine($"{subject}? Never heard of it. Is that similar to crabcore?");
                     break;
 
             }
